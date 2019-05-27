@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 import 'package:my_first_flutter/widgets/Toast.dart';
 
 import 'package:my_first_flutter/pages/game/GamePage.dart';
@@ -102,8 +102,8 @@ class _MyHomePageState extends State<MyHomePage> {
           });
         },
         currentIndex: cur,
-        selectedFontSize: 14,
-        unselectedFontSize: 14,
+//        selectedFontSize: 14,
+//        unselectedFontSize: 14,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(IconData(0xe063, fontFamily: 'MaterialIcons')),

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 import 'package:my_first_flutter/pages/MyHomePage.dart';
 
 void main() => runApp(MyApp());

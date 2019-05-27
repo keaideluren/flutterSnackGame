@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_web/material.dart';
+import 'package:flutter_web/widgets.dart';
 
 class Toast {
   static OverlayEntry _overlayEntry; //toast靠它加到屏幕上
