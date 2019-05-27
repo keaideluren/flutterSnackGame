@@ -144,19 +144,19 @@ class SnackGameWidget extends StatefulWidget {
 
 class SnackGameState extends State<StatefulWidget> {
   DOT _snackBody, _food;
-
-  SnackGameState(){
-    final GameBloc bloc = BlocProvider.of<GameBloc>(context);
-    bloc.outSnackData.listen((SnackData snackData){
-      setState(() {
-        _snackBody = snackData.snackBody;
-        _food = snackData.food;
-      });
-    });
-  }
+  GameBloc _bloc;
 
   @override
   Widget build(BuildContext context) {
+    if(_bloc == null) {
+      _bloc = BlocProvider.of<GameBloc>(context);
+      _bloc.outSnackData.listen((SnackData snackData){
+        setState(() {
+          _snackBody = snackData.snackBody;
+          _food = snackData.food;
+        });
+      });
+    }
     return Listener(
       child: CustomPaint(
         painter: SnackGamePainter(_snackBody, _food),
